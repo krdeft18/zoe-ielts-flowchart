@@ -1,0 +1,1 @@
+export function sample(stages,time){const duration=stages.reduce((a,s)=>a+s.animationSeconds,0);const t=Math.max(0,Math.min(duration,Number.isFinite(time)?time:0));let start=0;for(let i=0;i<stages.length;i++){const end=start+stages[i].animationSeconds;if(t<end||i===stages.length-1)return {index:i,progress:(t-start)/stages[i].animationSeconds,time:t,duration};start=end;}}

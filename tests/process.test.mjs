@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {sample} from '../dist/process.js';
+const data=JSON.parse(fs.readFileSync(new URL('../dist/api/v1/processes/brick-making.json',import.meta.url)));
+test('route preserves process order and alternatives',()=>{assert.deepEqual(data.stages.map(s=>s.id),['excavate','crush','mix','shape','dry','moderate','high','cool','pack','deliver']);assert.deepEqual(data.branch,{type:'alternative',options:['mould','wire']})});
+test('numeric source facts retained',()=>{assert.equal(data.stages[4].fact,'24–48 hours');assert.equal(data.stages[5].fact,'200–980°C');assert.equal(data.stages[6].fact,'870–1300°C');assert.equal(data.stages[7].fact,'48–72 hours')});
+test('seek boundaries and end are deterministic',()=>{assert.equal(sample(data.stages,-1).time,0);assert.equal(sample(data.stages,15).index,1);assert.equal(sample(data.stages,150).index,9);assert.equal(sample(data.stages,180).progress,1);assert.deepEqual(sample(data.stages,21),sample(data.stages,21))});

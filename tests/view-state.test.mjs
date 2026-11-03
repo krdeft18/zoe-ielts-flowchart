@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {brickTracePose,explanationVisible} from '../dist/view-state.js';
+test('camera target follows the actual moving brick, including height and delivery departure',()=>{for(const point of [{x:-26,y:2.4,z:-7},{x:14.3,y:1.14,z:-7},{x:-33,y:1.14,z:7}]){const pose=brickTracePose(point);assert.deepEqual({x:pose.x,y:pose.y,z:pose.z},point);assert.equal(pose.radius,13)}});
+test('trace framing adapts to narrow screens; explanation switch remains independent',()=>{assert.ok(brickTracePose({x:0,y:0,z:0},.6).radius>13);assert.equal(explanationVisible(true,'factory'),true);assert.equal(explanationVisible(false,'factory'),false)});

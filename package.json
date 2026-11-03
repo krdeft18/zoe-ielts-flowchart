@@ -1,0 +1,14 @@
+{
+  "name": "open-ielts-3d",
+  "version": "0.14.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-contained brick manufacturing lesson and animated 3D factory",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

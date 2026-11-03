@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "0.2",
+  "id": "brick-making",
+  "title": "Brick manufacturing",
+  "provenance": "Manually verified against reference.png, the original user-provided brick-manufacturing chart.",
+  "branch": {
+    "type": "alternative",
+    "options": [
+      "mould",
+      "wire"
+    ]
+  },
+  "stages": [
+    {
+      "id": "excavate",
+      "title": "Excavate clay",
+      "description": "Clay is dug from the ground using an excavator.",
+      "fact": "Clay",
+      "animationSeconds": 15
+    },
+    {
+      "id": "crush",
+      "title": "Screen & crush",
+      "description": "Clay passes through a metal grid and over rollers.",
+      "fact": "Metal grid \u00b7 rollers",
+      "animationSeconds": 15
+    },
+    {
+      "id": "mix",
+      "title": "Mix ingredients",
+      "description": "Sand and water are added to the clay.",
+      "fact": "Clay + sand + water",
+      "animationSeconds": 15
+    },
+    {
+      "id": "shape",
+      "title": "Shape the bricks",
+      "description": "The mixture is shaped using a mould OR cut with a wire cutter.",
+      "fact": "Two alternative methods",
+      "animationSeconds": 15
+    },
+    {
+      "id": "dry",
+      "title": "Dry",
+      "description": "The newly shaped bricks are dried in an oven.",
+      "fact": "24\u201348 hours",
+      "animationSeconds": 15
+    },
+    {
+      "id": "moderate",
+      "title": "Fire \u00b7 moderate",
+      "description": "The dried bricks enter the first kiln stage.",
+      "fact": "200\u2013980\u00b0C",
+      "animationSeconds": 15
+    },
+    {
+      "id": "high",
+      "title": "Fire \u00b7 high",
+      "description": "The bricks are heated at a higher temperature.",
+      "fact": "870\u20131300\u00b0C",
+      "animationSeconds": 15
+    },
+    {
+      "id": "cool",
+      "title": "Cool",
+      "description": "The fired bricks cool in a cooling chamber.",
+      "fact": "48\u201372 hours",
+      "animationSeconds": 15
+    },
+    {
+      "id": "pack",
+      "title": "Package",
+      "description": "The cooled bricks are stacked and packaged.",
+      "fact": "Finished bricks",
+      "animationSeconds": 15
+    },
+    {
+      "id": "deliver",
+      "title": "Deliver",
+      "description": "The packaged bricks are transported by truck.",
+      "fact": "Delivery",
+      "animationSeconds": 15
+    }
+  ],
+  "visualizationNote": "Machinery internals, cutaways, mixing, straps and loading motions are illustrative; the source chart specifies the process and facts, not these mechanisms."
+}
